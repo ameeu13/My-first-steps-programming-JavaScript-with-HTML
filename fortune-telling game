@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<h1>JUEGO DE ADIVINACIÓN :)</h1>
+
+<script>
+
+    function saltarlinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase)
+        saltarlinea();
+    }
+ 
+    var numeroPensado = Math.round(Math.random()*10);
+    //quiero que el usuario tenga 3 intentos para ganar siiuu!!
+    var intentos = 3;
+    var contador = 1;
+
+    while (contador <= intentos){
+        var numeroLanzado = parseInt(prompt("Ingrese un número que esté en el rango entre 0 y 10 :)"));
+
+        if (numeroPensado == numeroLanzado) {
+            
+            alert("ACERTÓ!!! :D en el intento: " + contador + " el número pensado era " + numeroPensado);
+                break;
+        }  
+
+        else {
+            
+            alert("No acertó :( ");
+        }
+
+        contador++;
+
+    }
+
+    if (numeroPensado == numeroLanzado) {
+            
+        imprimir("ACERTÓ!!! :D en el intento: " + contador + " el número pensado era " + numeroPensado);
+            
+    }  
+
+    else {
+            
+            imprimir("No acertó :( el número pensado era:  "+ numeroPensado);
+    }
+
+
+</script>
